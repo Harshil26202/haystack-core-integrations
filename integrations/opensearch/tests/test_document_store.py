@@ -1776,6 +1776,26 @@ class TestDocumentStore(
 
         assert [doc.meta["date"] for doc in result] == ["2021-09-01"]
 
+    @pytest.mark.parametrize(
+        ("operator", "value", "expected"),
+        [
+            ("==", "A Foo Document", ["A Foo Document"]),
+            ("!=", "A Foo Document", ["Another Bar Text"]),
+            ("in", ["A Foo Document", "missing text"], ["A Foo Document"]),
+            ("not in", ["A Foo Document"], ["Another Bar Text"]),
+        ],
+        ids=["eq", "ne", "in", "not_in"],
+    )
+    def test_filter_documents_on_multi_word_content(
+        self, document_store: OpenSearchDocumentStore, operator, value, expected
+    ):
+        # `content` is an analyzed text field, so a term query would never match a value of more than one word
+        document_store.write_documents([Document(content="A Foo Document"), Document(content="Another Bar Text")])
+
+        result = document_store.filter_documents(filters={"field": "content", "operator": operator, "value": value})
+
+        assert sorted(doc.content for doc in result) == expected
+
     @pytest.mark.parametrize("key", ["file-name", "x = 1; ctx.op = 'delete'; //"])
     def test_update_by_filter_treats_meta_keys_as_data(self, document_store: OpenSearchDocumentStore, key: str):
         # Keys that aren't valid Painless identifiers must neither break the update script nor be executed by it.

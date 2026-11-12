@@ -116,8 +116,8 @@ filters_data = [
         },
     ),
     (
-        {"operator": "AND", "conditions": [{"field": "text", "operator": "==", "value": "A Foo Document 1"}]},
-        {"bool": {"must": [{"match": {"text": {"query": "A Foo Document 1", "minimum_should_match": "100%"}}}]}},
+        {"operator": "AND", "conditions": [{"field": "content", "operator": "==", "value": "A Foo Document 1"}]},
+        {"bool": {"must": [{"match": {"content": {"query": "A Foo Document 1", "minimum_should_match": "100%"}}}]}},
     ),
     (
         {
