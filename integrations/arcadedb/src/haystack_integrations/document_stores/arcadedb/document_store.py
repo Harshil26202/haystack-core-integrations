@@ -734,7 +734,8 @@ def _sql_str(value: str | None) -> str:
     """Escape and quote a string value for ArcadeDB SQL."""
     if value is None:
         return "NULL"
-    escaped = value.replace("\\", "\\\\").replace("'", "\\'")
+    # A raw line break inside a string literal is a syntax error, so it is written as an escape sequence
+    escaped = value.replace("\\", "\\\\").replace("'", "\\'").replace("\n", "\\n").replace("\r", "\\r")
     return f"'{escaped}'"
 
 

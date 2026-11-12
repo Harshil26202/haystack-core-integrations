@@ -176,6 +176,11 @@ class TestFilterConversion:
         result = _convert_filters({"field": "meta.x", "operator": "==", "value": "a\\'b"})
         assert result == "meta.x = 'a\\\\\\'b'"
 
+    def test_value_with_line_breaks(self):
+        # A raw line break inside a string literal is a syntax error in ArcadeDB SQL
+        result = _convert_filters({"field": "meta.x", "operator": "==", "value": "a\r\nb"})
+        assert result == "meta.x = 'a\\r\\nb'"
+
     def test_value_with_single_quote(self):
         result = _convert_filters({"field": "meta.x", "operator": "==", "value": "it's"})
         assert result == "meta.x = 'it\\'s'"

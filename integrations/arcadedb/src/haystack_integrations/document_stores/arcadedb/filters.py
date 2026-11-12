@@ -117,7 +117,8 @@ def _comparison_to_sql(field: str, operator: str, value: Any) -> str:
 def _sql_value(value: Any) -> str:
     """Format a Python value as an ArcadeDB SQL literal."""
     if isinstance(value, str):
-        escaped = value.replace("\\", "\\\\").replace("'", "\\'")
+        # A raw line break inside a string literal is a syntax error, so it is written as an escape sequence
+        escaped = value.replace("\\", "\\\\").replace("'", "\\'").replace("\n", "\\n").replace("\r", "\\r")
         return f"'{escaped}'"
     if isinstance(value, bool):
         return "true" if value else "false"

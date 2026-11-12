@@ -54,6 +54,8 @@ class TestSqlHelpers:
             ("hello", "'hello'"),
             ("it's", "'it\\'s'"),
             ("a\\b", "'a\\\\b'"),
+            ("a\nb", "'a\\nb'"),
+            ("a\r\nb", "'a\\r\\nb'"),
             ("", "''"),
         ],
     )
@@ -584,6 +586,19 @@ class TestArcadeDBDocumentStore(
         all_docs = document_store.filter_documents()
         assert len(all_docs) == 1
         assert all_docs[0].content == "Updated content"
+
+    def test_write_documents_with_line_breaks(self, document_store: ArcadeDBDocumentStore):
+        """Line breaks in content and meta are written and read back, on insert and on overwrite."""
+        doc = Document(id="1", content="line one\nline two\r\nline three", meta={"note": "x\ny"})
+        document_store.write_documents([doc])
+        assert [(d.content, d.meta) for d in document_store.filter_documents()] == [(doc.content, doc.meta)]
+
+        updated = dataclasses.replace(doc, content="first\nsecond")
+        document_store.write_documents([updated], policy=DuplicatePolicy.OVERWRITE)
+        assert [d.content for d in document_store.filter_documents()] == ["first\nsecond"]
+
+        filters = {"field": "meta.note", "operator": "==", "value": "x\ny"}
+        assert [d.id for d in document_store.filter_documents(filters=filters)] == ["1"]
 
     def test_embedding_retrieval(self, document_store: ArcadeDBDocumentStore):
         """ArcadeDB-specific: vector search via _embedding_retrieval."""
