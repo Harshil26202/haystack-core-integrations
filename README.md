@@ -1,6 +1,6 @@
 # Repository Coverage (huggingface_api)
 
-[Full report](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-huggingface_api/htmlcov/index.html)
+[Full report](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-huggingface_api/htmlcov/index.html)
 
 | Name                                                                                           |    Stmts |     Miss |   Branch |   BrPart |   Cover |   Missing |
 |----------------------------------------------------------------------------------------------- | -------: | -------: | -------: | -------: | ------: | --------: |
@@ -10,9 +10,9 @@
 | src/haystack\_integrations/components/embedders/huggingface\_api/sparse\_embedding\_utils.py   |       42 |        0 |       14 |        0 |    100% |           |
 | src/haystack\_integrations/components/embedders/huggingface\_api/sparse\_text\_embedder.py     |       93 |        0 |       30 |        0 |    100% |           |
 | src/haystack\_integrations/components/embedders/huggingface\_api/text\_embedder.py             |      142 |        4 |       60 |        5 |     96% |158-159, 236-\>240, 240-\>245, 360, 362 |
-| src/haystack\_integrations/components/generators/huggingface\_api/chat/chat\_generator.py      |      296 |        5 |      116 |        9 |     97% |60-\>58, 143-\>147, 145-\>147, 472-473, 554, 724, 749-\>754, 816, 838-\>843 |
+| src/haystack\_integrations/components/generators/huggingface\_api/chat/chat\_generator.py      |      299 |        5 |      118 |        9 |     97% |60-\>58, 155-\>159, 157-\>159, 484-485, 566, 736, 761-\>766, 828, 850-\>855 |
 | src/haystack\_integrations/components/rankers/huggingface\_api/ranker.py                       |      132 |       10 |       42 |        3 |     93% |293-295, 335-336, 343, 348, 374-376 |
-| **TOTAL**                                                                                      | **1157** |   **42** |  **400** |   **32** | **95%** |           |
+| **TOTAL**                                                                                      | **1160** |   **42** |  **402** |   **32** | **95%** |           |
 
 
 ## Setup coverage badge
@@ -21,20 +21,20 @@ Below are examples of the badges you can use in your main branch `README` file.
 
 ### Direct image
 
-[![Coverage badge](https://raw.githubusercontent.com/deepset-ai/haystack-core-integrations/python-coverage-comment-action-data-huggingface_api/badge.svg)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-huggingface_api/htmlcov/index.html)
+[![Coverage badge](https://raw.githubusercontent.com/Harshil26202/haystack-core-integrations/python-coverage-comment-action-data-huggingface_api/badge.svg)](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-huggingface_api/htmlcov/index.html)
 
 This is the one to use if your repository is private or if you don't want to customize anything.
 
 ### [Shields.io](https://shields.io) Json Endpoint
 
-[![Coverage badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/deepset-ai/haystack-core-integrations/python-coverage-comment-action-data-huggingface_api/endpoint.json)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-huggingface_api/htmlcov/index.html)
+[![Coverage badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Harshil26202/haystack-core-integrations/python-coverage-comment-action-data-huggingface_api/endpoint.json)](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-huggingface_api/htmlcov/index.html)
 
 Using this one will allow you to [customize](https://shields.io/endpoint) the look of your badge.
 It won't work with private repositories. It won't be refreshed more than once per five minutes.
 
 ### [Shields.io](https://shields.io) Dynamic Badge
 
-[![Coverage badge](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=coverage&query=%24.message&url=https%3A%2F%2Fraw.githubusercontent.com%2Fdeepset-ai%2Fhaystack-core-integrations%2Fpython-coverage-comment-action-data-huggingface_api%2Fendpoint.json)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-huggingface_api/htmlcov/index.html)
+[![Coverage badge](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=coverage&query=%24.message&url=https%3A%2F%2Fraw.githubusercontent.com%2FHarshil26202%2Fhaystack-core-integrations%2Fpython-coverage-comment-action-data-huggingface_api%2Fendpoint.json)](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-huggingface_api/htmlcov/index.html)
 
 This one will always be the same color. It won't work for private repos. I'm not even sure why we included it.
 
