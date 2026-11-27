@@ -1,14 +1,14 @@
 # Repository Coverage (mcp)
 
-[Full report](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-mcp/htmlcov/index.html)
+[Full report](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-mcp/htmlcov/index.html)
 
 | Name                                                         |    Stmts |     Miss |   Branch |   BrPart |   Cover |   Missing |
 |------------------------------------------------------------- | -------: | -------: | -------: | -------: | ------: | --------: |
 | src/haystack\_integrations/tools/mcp/compatibility\_layer.py |       42 |        3 |       18 |        3 |     90% |22, 34, 53 |
-| src/haystack\_integrations/tools/mcp/mcp\_tool.py            |      535 |       27 |      134 |       20 |     93% |131-132, 204-209, 299, 325, 364-\>316, 381-382, 391, 473, 602, 632, 774-775, 786-787, 1094-\>1092, 1107-\>1115, 1108-\>1115, 1117, 1183-1185, 1212, 1218, 1262-\>1260, 1344-\>1349, 1405-\>exit, 1409, 1430-\>1433, 1436-\>1438, 1444-1445 |
-| src/haystack\_integrations/tools/mcp/mcp\_toolset.py         |      156 |       12 |       48 |        1 |     91% |   397-413 |
+| src/haystack\_integrations/tools/mcp/mcp\_tool.py            |      540 |       27 |      138 |       20 |     93% |137-138, 210-215, 305, 331, 370-\>322, 387-388, 397, 479, 608, 638, 780-781, 792-793, 1100-\>1098, 1113-\>1121, 1114-\>1121, 1123, 1189-1191, 1218, 1224, 1268-\>1266, 1358-\>1363, 1419-\>exit, 1423, 1444-\>1447, 1450-\>1452, 1458-1459 |
+| src/haystack\_integrations/tools/mcp/mcp\_toolset.py         |      157 |       12 |       48 |        1 |     91% |   418-434 |
 | src/haystack\_integrations/tools/mcp/oauth.py                |       73 |        0 |        8 |        1 |     99% | 206-\>208 |
-| **TOTAL**                                                    |  **806** |   **42** |  **208** |   **25** | **93%** |           |
+| **TOTAL**                                                    |  **812** |   **42** |  **212** |   **25** | **93%** |           |
 
 
 ## Setup coverage badge
@@ -17,20 +17,20 @@ Below are examples of the badges you can use in your main branch `README` file.
 
 ### Direct image
 
-[![Coverage badge](https://raw.githubusercontent.com/deepset-ai/haystack-core-integrations/python-coverage-comment-action-data-mcp/badge.svg)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-mcp/htmlcov/index.html)
+[![Coverage badge](https://raw.githubusercontent.com/Harshil26202/haystack-core-integrations/python-coverage-comment-action-data-mcp/badge.svg)](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-mcp/htmlcov/index.html)
 
 This is the one to use if your repository is private or if you don't want to customize anything.
 
 ### [Shields.io](https://shields.io) Json Endpoint
 
-[![Coverage badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/deepset-ai/haystack-core-integrations/python-coverage-comment-action-data-mcp/endpoint.json)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-mcp/htmlcov/index.html)
+[![Coverage badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Harshil26202/haystack-core-integrations/python-coverage-comment-action-data-mcp/endpoint.json)](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-mcp/htmlcov/index.html)
 
 Using this one will allow you to [customize](https://shields.io/endpoint) the look of your badge.
 It won't work with private repositories. It won't be refreshed more than once per five minutes.
 
 ### [Shields.io](https://shields.io) Dynamic Badge
 
-[![Coverage badge](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=coverage&query=%24.message&url=https%3A%2F%2Fraw.githubusercontent.com%2Fdeepset-ai%2Fhaystack-core-integrations%2Fpython-coverage-comment-action-data-mcp%2Fendpoint.json)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-mcp/htmlcov/index.html)
+[![Coverage badge](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=coverage&query=%24.message&url=https%3A%2F%2Fraw.githubusercontent.com%2FHarshil26202%2Fhaystack-core-integrations%2Fpython-coverage-comment-action-data-mcp%2Fendpoint.json)](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-mcp/htmlcov/index.html)
 
 This one will always be the same color. It won't work for private repos. I'm not even sure why we included it.
 
