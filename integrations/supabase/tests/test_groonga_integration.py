@@ -147,6 +147,59 @@ class TestSupabaseGroongaDocumentStoreIntegration(
         assert len(result) == 1
         assert result[0].meta["lang"] == "en"
 
+    @pytest.mark.parametrize(
+        ("filters", "expected_ids"),
+        [
+            # numbers are compared as numbers inside OR and NOT too, not as text ("10" < "9.5")
+            ({"operator": "OR", "conditions": [{"field": "meta.number", "operator": ">", "value": 9.5}]}, ["b"]),
+            (
+                {"operator": "NOT", "conditions": [{"field": "meta.number", "operator": "<=", "value": 9.5}]},
+                ["b", "d", "e"],
+            ),
+            # a null value never matches a numeric range
+            ({"field": "meta.number", "operator": "<", "value": 2}, ["c"]),
+            (
+                {"operator": "OR", "conditions": [{"field": "meta.number", "operator": "<", "value": 2}]},
+                ["c"],
+            ),
+            # booleans in `in` and `not in`
+            ({"field": "meta.flag", "operator": "in", "value": [True]}, ["a"]),
+            ({"field": "meta.flag", "operator": "not in", "value": [True]}, ["b", "c", "d", "e"]),
+            # a comparison with an absent field is false, so `!=` and negations cover the documents without it
+            (
+                {"operator": "OR", "conditions": [{"field": "meta.flag", "operator": "!=", "value": False}]},
+                ["a", "c", "d", "e"],
+            ),
+            ({"operator": "NOT", "conditions": [{"field": "meta.flag", "operator": "==", "value": None}]}, ["a", "b"]),
+        ],
+        ids=[
+            "or_number_gt",
+            "not_number_lte",
+            "number_lt_skips_null",
+            "or_number_lt_skips_null",
+            "bool_in",
+            "bool_not_in",
+            "or_ne_includes_absent",
+            "not_eq_none",
+        ],
+    )
+    def test_filter_documents_compares_numbers_booleans_and_absent_fields(
+        self, document_store: SupabaseGroongaDocumentStore, filters: dict, expected_ids: list[str]
+    ) -> None:
+        document_store.write_documents(
+            [
+                Document(id="a", content="a", meta={"number": 9, "flag": True}),
+                Document(id="b", content="b", meta={"number": 10, "flag": False}),
+                Document(id="c", content="c", meta={"number": -2.5}),
+                Document(id="d", content="d", meta={"number": None}),
+                Document(id="e", content="e", meta={}),
+            ]
+        )
+
+        result = document_store.filter_documents(filters=filters)
+
+        assert sorted(doc.id for doc in result) == expected_ids
+
     def test_filter_update_and_delete_by_filter_beyond_max_rows(
         self, document_store: SupabaseGroongaDocumentStore
     ) -> None:
