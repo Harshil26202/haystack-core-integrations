@@ -1,13 +1,13 @@
 # Repository Coverage (pinecone-combined)
 
-[Full report](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-pinecone-combined/htmlcov/index.html)
+[Full report](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-pinecone-combined/htmlcov/index.html)
 
 | Name                                                                              |    Stmts |     Miss |   Branch |   BrPart |   Cover |   Missing |
 |---------------------------------------------------------------------------------- | -------: | -------: | -------: | -------: | ------: | --------: |
 | src/haystack\_integrations/components/retrievers/pinecone/embedding\_retriever.py |       40 |        0 |        4 |        0 |    100% |           |
-| src/haystack\_integrations/document\_stores/pinecone/document\_store.py           |      428 |       15 |      146 |       16 |     95% |126-131, 143, 323, 348, 539, 705, 769, 782-\>781, 786, 792, 814-\>813, 826-\>815, 835-\>815, 855, 884, 932 |
+| src/haystack\_integrations/document\_stores/pinecone/document\_store.py           |      428 |      190 |      146 |       19 |     57% |89, 98, 109-\>115, 119-151, 223-230, 236-244, 256-269, 283-296, 309-327, 336-353, 361-363, 371-373, 379-385, 391-397, 407-408, 421-441, 454-474, 494-514, 534-554, 583-597, 621-636, 655-674, 705, 725-\>729, 756-\>762, 767-773, 778-796, 814-\>813, 826-\>815, 835-\>815, 855, 872, 875-876, 884, 909-\>908, 932, 947-948, 960-961, 974-975, 990-991, 1016-1017, 1042-1043, 1061-1062, 1080-1081, 1109-1110, 1138-1139 |
 | src/haystack\_integrations/document\_stores/pinecone/filters.py                   |       99 |        0 |       44 |        0 |    100% |           |
-| **TOTAL**                                                                         |  **567** |   **15** |  **194** |   **16** | **96%** |           |
+| **TOTAL**                                                                         |  **567** |  **190** |  **194** |   **19** | **68%** |           |
 
 
 ## Setup coverage badge
@@ -16,20 +16,20 @@ Below are examples of the badges you can use in your main branch `README` file.
 
 ### Direct image
 
-[![Coverage badge](https://raw.githubusercontent.com/deepset-ai/haystack-core-integrations/python-coverage-comment-action-data-pinecone-combined/badge.svg)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-pinecone-combined/htmlcov/index.html)
+[![Coverage badge](https://raw.githubusercontent.com/Harshil26202/haystack-core-integrations/python-coverage-comment-action-data-pinecone-combined/badge.svg)](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-pinecone-combined/htmlcov/index.html)
 
 This is the one to use if your repository is private or if you don't want to customize anything.
 
 ### [Shields.io](https://shields.io) Json Endpoint
 
-[![Coverage badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/deepset-ai/haystack-core-integrations/python-coverage-comment-action-data-pinecone-combined/endpoint.json)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-pinecone-combined/htmlcov/index.html)
+[![Coverage badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Harshil26202/haystack-core-integrations/python-coverage-comment-action-data-pinecone-combined/endpoint.json)](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-pinecone-combined/htmlcov/index.html)
 
 Using this one will allow you to [customize](https://shields.io/endpoint) the look of your badge.
 It won't work with private repositories. It won't be refreshed more than once per five minutes.
 
 ### [Shields.io](https://shields.io) Dynamic Badge
 
-[![Coverage badge](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=coverage&query=%24.message&url=https%3A%2F%2Fraw.githubusercontent.com%2Fdeepset-ai%2Fhaystack-core-integrations%2Fpython-coverage-comment-action-data-pinecone-combined%2Fendpoint.json)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-pinecone-combined/htmlcov/index.html)
+[![Coverage badge](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=coverage&query=%24.message&url=https%3A%2F%2Fraw.githubusercontent.com%2FHarshil26202%2Fhaystack-core-integrations%2Fpython-coverage-comment-action-data-pinecone-combined%2Fendpoint.json)](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-pinecone-combined/htmlcov/index.html)
 
 This one will always be the same color. It won't work for private repos. I'm not even sure why we included it.
 
