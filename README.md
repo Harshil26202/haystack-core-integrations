@@ -1,15 +1,15 @@
 # Repository Coverage (anthropic)
 
-[Full report](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-anthropic/htmlcov/index.html)
+[Full report](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-anthropic/htmlcov/index.html)
 
 | Name                                                                                        |    Stmts |     Miss |   Branch |   BrPart |   Cover |   Missing |
 |-------------------------------------------------------------------------------------------- | -------: | -------: | -------: | -------: | ------: | --------: |
-| src/haystack\_integrations/components/generators/anthropic/chat/chat\_generator.py          |      216 |       10 |       92 |       12 |     92% |250, 315, 362-363, 421-\>420, 438, 448-\>452, 454-\>456, 457, 499-\>498, 522-524, 534-\>538, 540-\>542, 543 |
-| src/haystack\_integrations/components/generators/anthropic/chat/foundry\_chat\_generator.py |       68 |        3 |       20 |        4 |     92% |198, 203, 263-\>265, 266 |
-| src/haystack\_integrations/components/generators/anthropic/chat/utils.py                    |      299 |       34 |      186 |       22 |     85% |89-\>79, 96, 98, 101-\>79, 189-\>200, 198-199, 270-274, 287-302, 306-307, 311, 319, 339-\>338, 380-\>385, 385-\>388, 447-448, 454-455, 524, 589-597, 602-\>604, 605, 607, 624-625 |
-| src/haystack\_integrations/components/generators/anthropic/chat/vertex\_chat\_generator.py  |       52 |        0 |       10 |        1 |     98% | 217-\>220 |
+| src/haystack\_integrations/components/generators/anthropic/chat/chat\_generator.py          |      227 |       10 |       96 |       12 |     93% |268, 334, 385-386, 452-\>451, 469, 479-\>483, 485-\>487, 488, 530-\>529, 553-555, 565-\>569, 571-\>573, 574 |
+| src/haystack\_integrations/components/generators/anthropic/chat/foundry\_chat\_generator.py |       69 |        3 |       20 |        4 |     92% |205, 210, 271-\>273, 274 |
+| src/haystack\_integrations/components/generators/anthropic/chat/utils.py                    |      308 |       34 |      188 |       22 |     85% |91-\>81, 98, 100, 103-\>81, 206-\>217, 215-216, 287-291, 304-319, 323-324, 328, 336, 356-\>355, 397-\>402, 402-\>405, 464-465, 471-472, 541, 606-614, 619-\>621, 622, 624, 641-642 |
+| src/haystack\_integrations/components/generators/anthropic/chat/vertex\_chat\_generator.py  |       53 |        0 |       10 |        1 |     98% | 225-\>228 |
 | src/haystack\_integrations/token\_counters/anthropic/token\_counter.py                      |       49 |        4 |       16 |        3 |     89% |69, 71, 93-94 |
-| **TOTAL**                                                                                   |  **684** |   **51** |  **324** |   **42** | **89%** |           |
+| **TOTAL**                                                                                   |  **706** |   **51** |  **330** |   **42** | **89%** |           |
 
 
 ## Setup coverage badge
@@ -18,20 +18,20 @@ Below are examples of the badges you can use in your main branch `README` file.
 
 ### Direct image
 
-[![Coverage badge](https://raw.githubusercontent.com/deepset-ai/haystack-core-integrations/python-coverage-comment-action-data-anthropic/badge.svg)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-anthropic/htmlcov/index.html)
+[![Coverage badge](https://raw.githubusercontent.com/Harshil26202/haystack-core-integrations/python-coverage-comment-action-data-anthropic/badge.svg)](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-anthropic/htmlcov/index.html)
 
 This is the one to use if your repository is private or if you don't want to customize anything.
 
 ### [Shields.io](https://shields.io) Json Endpoint
 
-[![Coverage badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/deepset-ai/haystack-core-integrations/python-coverage-comment-action-data-anthropic/endpoint.json)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-anthropic/htmlcov/index.html)
+[![Coverage badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Harshil26202/haystack-core-integrations/python-coverage-comment-action-data-anthropic/endpoint.json)](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-anthropic/htmlcov/index.html)
 
 Using this one will allow you to [customize](https://shields.io/endpoint) the look of your badge.
 It won't work with private repositories. It won't be refreshed more than once per five minutes.
 
 ### [Shields.io](https://shields.io) Dynamic Badge
 
-[![Coverage badge](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=coverage&query=%24.message&url=https%3A%2F%2Fraw.githubusercontent.com%2Fdeepset-ai%2Fhaystack-core-integrations%2Fpython-coverage-comment-action-data-anthropic%2Fendpoint.json)](https://htmlpreview.github.io/?https://github.com/deepset-ai/haystack-core-integrations/blob/python-coverage-comment-action-data-anthropic/htmlcov/index.html)
+[![Coverage badge](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=coverage&query=%24.message&url=https%3A%2F%2Fraw.githubusercontent.com%2FHarshil26202%2Fhaystack-core-integrations%2Fpython-coverage-comment-action-data-anthropic%2Fendpoint.json)](https://htmlpreview.github.io/?https://github.com/Harshil26202/haystack-core-integrations/blob/python-coverage-comment-action-data-anthropic/htmlcov/index.html)
 
 This one will always be the same color. It won't work for private repos. I'm not even sure why we included it.
 
